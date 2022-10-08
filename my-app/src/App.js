@@ -1,32 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './componentes/NavBar';
+import Navbar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
-
-
-function App({texto }) {
-  return (
-    <div className="App">
-   <Presentacion description= {texto} />
-    </div>
-  );
+//import CartWidget from './componentes/CartWidget';
+//<CartWidget/>
+            
+function App() {
+    return (
+        <>
+            <Navbar greeting="Libreria Real!" />
+            <ItemListContainer />
+        </>
+    );
 }
-
-
-
-
-function App({texto }) {
-  return (
-    <div>
-    <NavBar/>
-    <ItemListContainer/>
-    </div>
-  );
-}
-
-
-
-
-
 
 export default App;

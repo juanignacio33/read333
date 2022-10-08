@@ -1,12 +1,11 @@
-import ItemListContainer from './CartWidget'
+function ItemListContainer  (){
+return (
+      <h1 >juan itemlsit</h1>
 
-const ItemListContainer = () => {
-    return (
-        //resto del menu => brand , las categorias clickeables
-        <div>
-            <CartWidget/>
-         </div>
-    )
-}
 
-export default NavBar;
+
+      
+    );
+};
+
+export default ItemListContainer;

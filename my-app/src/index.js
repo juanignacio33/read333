@@ -2,22 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import App2 from './App2';
-import Presentacion from  "./presentacion";
-
 import reportWebVitals from './reportWebVitals';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App texto="componentes 2" />
-    <App2 nombreclass= "componentes 1" />
-
-    <ItemListContainer/>
-
-
-  </React.StrictMode>
-);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
