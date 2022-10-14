@@ -1,8 +1,25 @@
 import './App.css';
-import Navbar from './componentes/NavBar';
-import ItemListContainer from './componentes/ItemListContainer';
-//import CartWidget from './componentes/CartWidget';
-//<CartWidget/>
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Header/Navbar';
+import ItemListContainer from './components/Main/ItemListContainer';
+
+function App() {
+    return (
+        <>
+            <Navbar />
+            <main>
+                <ItemListContainer />
+            </main>
+            <Footer />
+        </>
+    );
+}
+
+export default App;
+
+
+/*
+
             
 function App() {
     return (
@@ -14,3 +31,4 @@ function App() {
 }
 
 export default App;
+*/
