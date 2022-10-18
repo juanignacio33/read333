@@ -7,12 +7,10 @@ const Item = ({ prod }) => {
         <article className="card">
                     <img src={prod.img} alt={prod.title} />
             <div className="card-info">
-                <h2>Nombre</h2>
-                <h4>$Precio.-</h4>
-                <h5>#Categoria</h5>
-                <h2>{prod.title}</h2>
-                <h4>${prod.price}.-</h4>
-                <h5>#{prod.category}</h5>
+               
+                <h2>Libro: °{prod.title}</h2>
+                <h4>Precio{prod.price}.-</h4>
+                <h5>#Categoria/{prod.category}</h5>
             </div>
         </article>
     );

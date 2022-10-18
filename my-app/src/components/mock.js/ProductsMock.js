@@ -1,30 +1,53 @@
 export const products = [
     {
-        id: 1,
-        title: 'Remera blanca',
-        price: 200,
-        stock: 10,
-        category: 'remeras',
-        img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/1_d4b0kr.jpg',
-        //img: 'img/remera.png',
+       id: 1,
+       img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/1_d4b0kr.jpg',
+       title: "los 11 pasos",
+       autor: "JL",
+       price: "$ 3000",
+       category: 'Magia'
     },
     {
-        id: 2,
-        title: 'Camisa azul',
-        price: 300,
-        stock: 5,
-        category: 'camisas',
-        img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098244/libros/4_aj9yeg.jpg',
+       id: 2,
+       img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098244/libros/2_k1gzva.jpg",
+       title: "padre rico padre pobre",
+       autor: "Robert Kiyosaki",
+       price: "$ 2000",
+       category: 'Economia'
     },
     {
-        id: 3,
-        title: 'Gorra negra',
-        price: 20,
-        stock: 3,
-        category: 'gorras',
-        img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/3_f3olxp.jpg',
+       id: 3,
+       img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/3_f3olxp.jpg',
+       title: "y soles lloveran",
+       autor: "JL",
+       price: "$ 3000",
+       category: 'novela'
     },
-];
+    {
+       id: 4,
+       img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098244/libros/4_aj9yeg.jpg',
+       title: "el otro camino",
+       autor: "JL",
+       price: "$ 6000",
+       category: 'Ocultismo'
+    },
+    {
+       id: 5, img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/5_jt7do4.jpg",
+       title: "lluvia seca",
+       autor: "JL",
+       price: "$ 4000",
+       category: 'hechos reales '
+    },
+    {
+       id: 6,
+       img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/6_wh37sw.jpg",
+       title: "la solucion es js",
+       autor: "Internet",
+       price: "$ 5000",
+       category: 'Programacion'
+    },
+ 
+ ];
 
 // export const saludar = () =>{
 
