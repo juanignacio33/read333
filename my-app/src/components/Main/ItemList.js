@@ -1,13 +1,15 @@
 import React from 'react';
 import Item from './Item';
 
-const ItemList = () => {
+const ItemList = ({ items }) => {
+    //console.log(props.items);
     //mapeo de los productos
     return (
         <div className="item-list">
-            <Item />
+                       {items.map((prod) => {
+                return <Item prod={prod} key={prod.id} />;
+            })}
         </div>
     );
 };
-
 export default ItemList;

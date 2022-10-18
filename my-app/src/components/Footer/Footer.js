@@ -4,4 +4,4 @@ const Footer = () => {
     return <footer>Bienvenido</footer>;
 };
 
-export default Footer;
+export default Footer; 
