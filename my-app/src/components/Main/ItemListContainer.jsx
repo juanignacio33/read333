@@ -8,7 +8,10 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const traerProductos = () => {
-            return new Promise((res, rej) => {
+            return new Promise((res, rej) => 
+            {
+                /*const producto = products.find((prod)=> prod.id===1);
+                HTMLFormControlsCollection.log(producto)*/
                 setTimeout(() => {
                     res(products);
                 }, 2000);
@@ -26,9 +29,11 @@ const ItemListContainer = () => {
     //console.log(items);
 
     return (
+        <main>
         <div className="item-list-container">
             <ItemList items={items} />
         </div>
+        </main>
     );
 };
 

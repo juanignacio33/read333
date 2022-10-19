@@ -4,7 +4,7 @@ export const products = [
        img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/1_d4b0kr.jpg',
        title: "los 11 pasos",
        autor: "JL",
-       price: "$ 3000",
+       price: "$ 9000",
        category: 'Magia'
     },
     {
@@ -20,8 +20,8 @@ export const products = [
        img: 'https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/3_f3olxp.jpg',
        title: "y soles lloveran",
        autor: "JL",
-       price: "$ 3000",
-       category: 'novela'
+       price: "$ 7000",
+       category: 'Novela'
     },
     {
        id: 4,
@@ -31,19 +31,13 @@ export const products = [
        price: "$ 6000",
        category: 'Ocultismo'
     },
-    {
-       id: 5, img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/5_jt7do4.jpg",
-       title: "lluvia seca",
-       autor: "JL",
-       price: "$ 4000",
-       category: 'hechos reales '
-    },
+   
     {
        id: 6,
        img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/6_wh37sw.jpg",
        title: "la solucion es js",
        autor: "Internet",
-       price: "$ 5000",
+       price: "$ 4000",
        category: 'Programacion'
     },
  
