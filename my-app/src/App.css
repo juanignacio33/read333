@@ -53,6 +53,7 @@ nav ul li {
 
 main {
   min-height: 80vh;
+ 
 }
 
 .item-list-container {
@@ -200,4 +201,8 @@ a {
 
 .active {
   border-bottom: 2px solid var(--primary);
+}
+/*NAV*/
+nav {
+  background-color: rgb(250, 252, 235);
 }
