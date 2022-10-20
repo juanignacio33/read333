@@ -1,38 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import ItemList from './ItemList'; //-> import por default
+import ItemList from './ItemList'; 
 import { products } from "../mock.js/ProductsMock";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
-    //estado
+    const [items, setItem] = useState([]);
+    const { Thot33 } = useParams();
 
     useEffect(() => {
-        const traerProductos = () => {
-            return new Promise((res, rej) => 
-            {
-                /*const producto = products.find((prod)=> prod.id===1);
-                HTMLFormControlsCollection.log(producto)*/
+        const traerProducto = () => {
+            return new Promise((res, rej) => {
+                const prodFiltrados = products.filter(
+                    (prod) => prod.category === Thot33
+                );
+
+                const prod = Thot33 ? prodFiltrados : products;
                 setTimeout(() => {
-                    res(products);
-                }, 2000);
+                    res(prod);
+                }, 300);
             });
         };
-        traerProductos()
+        traerProducto()
             .then((res) => {
-                setItems(res);
+                setItem(res);
             })
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
-
-    //console.log(items);
+    }, [Thot33]);
 
     return (
         <main>
-        <div className="item-list-container">
-            <ItemList items={items} />
-        </div>
+            <div className="item-list-container">
+                <ItemList items={items} />
+            </div>
         </main>
     );
 };

@@ -1,5 +1,4 @@
 import './App.css';
-//import Ejemplo from './components/Ejemplo/Ejemplo';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Header/Navbar';
 import ItemDetailContainer from './components/Main/ItemDetailContainer';
@@ -12,15 +11,12 @@ function App() {
         <BrowserRouter>
             <Navbar />
             <Routes>
-            
-                <Route path="/"element={<ItemListContainer />}/>
-                <Route path="/category"element={<ItemListContainer />}/>
-                <Route path="/item"element={<ItemDetailContainer />}/>
-                <Route path="/cart"element={<Cart/>}/>
-               
-                
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/category/:Thot33" element={<ItemListContainer />} />
+                <Route path="/item/:id" element={<ItemDetailContainer />} />
+                <Route path="/cart" element={<Cart />} />
 
-                 {/*<Route path="/*"element={<h1>Error</h1>}/>*/}
+                {/*<Route path="/*"element={<h1>Error</h1>}/>*/}
             </Routes>
             <Footer />
         </BrowserRouter>

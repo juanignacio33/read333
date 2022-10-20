@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
                     rem, consequatur accusamus dicta incidunt sapiente cum ipsa,
                     ducimus
                 </p>
-                <ItemCount stock={10} initial={1} />
+                <ItemCount stock={11} initial={1} />
             </div>
         </div>
     );

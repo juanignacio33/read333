@@ -13,7 +13,7 @@ export const products = [
        title: "padre rico padre pobre",
        autor: "Robert Kiyosaki",
        price: "$ 2000",
-       category: 'Economia'
+       category: 'Magia'
     },
     {
        id: 3,
@@ -21,7 +21,7 @@ export const products = [
        title: "y soles lloveran",
        autor: "JL",
        price: "$ 7000",
-       category: 'Novela'
+       category: 'Ocultismo'
     },
     {
        id: 4,
@@ -38,8 +38,16 @@ export const products = [
        title: "la solucion es js",
        autor: "Internet",
        price: "$ 4000",
-       category: 'Programacion'
+       category: 'Tecnologia'
     },
+    {
+      id: 7,
+      img: "https://res.cloudinary.com/dbq0h1f5w/image/upload/v1666098243/libros/5_jt7do4.jpg",
+      title: "Lluvia seca",
+      autor: "JL",
+      price: "$ 5000",
+      category: 'Novela'
+   },
  
  ];
 
