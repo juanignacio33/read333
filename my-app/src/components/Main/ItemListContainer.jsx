@@ -1,34 +1,51 @@
 import React, { useEffect, useState } from 'react';
-import ItemList from './ItemList'; 
-import { products } from "../mock.js/ProductsMock";
+import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import PropagateLoader from 'react-spinners/PropagateLoader';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../services/fireabseConfig';
 
 const ItemListContainer = () => {
-    const [items, setItem] = useState([]);
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { Thot33 } = useParams();
 
     useEffect(() => {
-        const traerProducto = () => {
-            return new Promise((res, rej) => {
-                const prodFiltrados = products.filter(
-                    (prod) => prod.category === Thot33
-                );
-
-                const prod = Thot33 ? prodFiltrados : products;
-                setTimeout(() => {
-                    res(prod);
-                }, 300);
-            });
-        };
-        traerProducto()
+        const collectionProd = collection(db, 'productos');
+        const referencia = Thot33
+            ? query(collectionProd, where('category', '==', Thot33))
+            : collectionProd;
+        getDocs(referencia)
             .then((res) => {
-                setItem(res);
+                const products = res.docs.map((prod) => {
+                    return {
+                        id: prod.id,
+                        ...prod.data(),
+                    };
+                });
+                setItems(products);
             })
             .catch((error) => {
                 console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
             });
+        return () => setLoading(true);
     }, [Thot33]);
 
+    if (loading) {
+        return (
+            <div
+                style={{
+                    minHeight: '80vh', display: 'flex', justifyContent: 'center',
+                }}
+            >
+                <PropagateLoader style={{ marginTop: '100px' }} color="black" />
+                { }
+            </div>
+        );
+    }
     return (
         <main>
             <div className="item-list-container">

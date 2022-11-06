@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+/*import { useEffect } from 'react';
 
 const Ejemplo = () => {
     //estado
@@ -26,4 +26,4 @@ const Ejemplo = () => {
     );
 };
 
-export default Ejemplo;
+export default Ejemplo;*/

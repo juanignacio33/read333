@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import { products } from '../mock.js/ProductsMock';
 import { useParams } from 'react-router-dom';
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../services/fireabseConfig';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
-    const {id} = useParams()
- 
-    useEffect(() => {
-        const traerProducto = () => {
-            return new Promise((res, rej) => {
-                const producto = products.find(
-                    (prod) => prod.id === Number(id)
-                );
-                setTimeout(() => {
-                    res(producto);
-                }, 600);
-            });
-        };
+    const { id } = useParams()
 
-        traerProducto()
+    useEffect(() => {
+        const collectionProd = collection(db, 'productos');
+        const ref = doc(collectionProd, id);
+
+        getDoc(ref)
             .then((res) => {
-                setItem(res);
+                setItem({
+                    id: res.id,
+                    ...res.data(),
+                });
             })
             .catch((error) => {
                 console.log(error);
             });
     }, [id]);
 
-    console.log(item);
     return (
         <div className="item-list-container">
             <ItemDetail item={item} />
