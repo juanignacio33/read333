@@ -27,8 +27,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Link to="/">
-                <h1>Libreria Real 📚📚📚 </h1>
+                <h1>Libreria Real 📚 </h1>
             </Link>
+            <div>
             <ul>
                 {categories.map((cat) => (
                     <NavLink key={cat.id} to={`/category/${cat.path}`}>
@@ -37,8 +38,10 @@ const Navbar = () => {
                 ))}
             </ul>
             <Link to="/cart">
+                <h6 class="widget-container ">Carrito</h6>
                 <CartWidget />
             </Link>
+            </div>
         </nav>
     );
 };

@@ -38,16 +38,17 @@ const ItemListContainer = () => {
         return (
             <div
                 style={{
-                    minHeight: '80vh', display: 'flex', justifyContent: 'center',
+                    minHeight: '77vh', display: 'flex', justifyContent: 'center',
                 }}
             >
-                <PropagateLoader style={{ marginTop: '100px' }} color="black" />
+                <PropagateLoader style={{ marginTop: '99px' }} color="black" />
                 { }
             </div>
         );
     }
     return (
         <main>
+            <h2 className='hdos'>☀️​Nuestros mejores y mas recomendables libros digitales!</h2>
             <div className="item-list-container">
                 <ItemList items={items} />
             </div>

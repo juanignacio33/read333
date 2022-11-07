@@ -7,7 +7,8 @@ const Cart = () => {
     const { cart, deleteAll, deleteOne } = useContext(CartContext);
 
     if (cart.length === 0) {
-        return <h1>Aún no hay productos</h1>;
+        return <h1><img src="https://res.cloudinary.com/dbq0h1f5w/image/upload/v1667798638/libros/Captura_de_pantalla_23_jtqm29.png" alt="" />
+               </h1>;
     }
     return (
         <div className="cart-container">
